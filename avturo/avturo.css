@@ -1,0 +1,154 @@
+/** Con el símbolo especial * se indica que el estilo asignado se aplica a todos los campos**/
+/**Con el padding a 0 quitamos cualquier distancia de separación entre el borde y el contenido**/
+/**Con el margin a 0 quitamos separación que se va a dejar entre el borde y la parte exterior de la capa**/
+*{margin:0px; padding:0px;}
+
+       
+/**********CAPA PRINCIPAL QUE CONTIENE TODOS LOS ELEMENTOS DE LA PÁGINA**********/
+
+  #content{
+    width:1000px; /* Define un ancho de página de 1000 píxeles */
+    height:auto;  /* Define una altura de página que se adapta al contenido publicado*/
+    margin:auto;  /* Los márgenes de la página se adaptan al tamaño de la ventana del navegador */
+           }
+          
+/******** COLORES PARA LOS ENLACES EN GENERAL********/
+   a:link {text-decoration:none;color:greenyellow;} /*color del link cuando no se ha utilizado */
+   a:visited {text-decoration:none;color:cyan;} /*color del link cuando se ha hecho clic en él para visitar la página */
+   a:active {text-decoration:none;color:magenta;} /*color del link mientras se hace clic sobre él */
+   a:hover {text-decoration:underline;color: yellow} /* Color del link nada más se suelta el clic */
+   
+/******************CABECERA *******************/
+  header{
+    width: 1000px;  /*La cabecera tednrá la misma longitud que el de la página, en este caso de 1000 pixeles */
+    height: 210px; /* La altura de la cabecera es de 210 píxeles que es la altura que tiene la imagen de fondo*/
+    background-image: url(imagenes/cartel.jpg); /* imagen de fondo cuya altura es de 210 pixeles */
+    float:left; /*este elemento se ajustará a la izquierda de la CAPA PRINCIPAL ()que lo contiene) */
+       }
+    
+   #titulo{
+     width: 1000px;  /*Longitud máxima para el texto que aparcerá en el header*/
+     height: 125px;  /*Altura para el texto del header*/
+     float:left;  /*El texto se ajustará a la izquierda del elemento header*/
+     padding-top: 160px; /*separación que existirá entre la parte superior del header y el texto*/
+     display:block; /*Mantiene todo el texto en una sóla línea como un bloque, para que no genere saltos de línea*/
+     text-align: left; /*>linea el texto a la izquierda*/
+            }
+            
+/*** MENÚ DE NAVEGACIÓN y debajo estilo para cada link de opciones de este menú**/
+
+    nav{
+      width: 1000px;
+      height: 30px;
+      float:left; /* Ajusta el menú a la izquierda */
+      color: white;
+      background-color:black;
+      font-size: 18px;
+      margin-bottom: 6px; /* Para que matenga un magen de 6 píxeles con respecto al elemento que le sigue */
+      padding-top: 3px; /* Para que matenga una distancia de 3 píxeles con respecto al elemento anterior */
+        }
+      
+    nav a{
+      display: inline-block; /* Trata el texto como un bloque y podemos distribuirlo en la línea a nuestro antojo */
+      width:120px; /* Ancho para todo el texto */
+      text-align: left; /*Alineación a izquierda del texto */
+      margin-left: 10px; /*Margen que exitirá entre el texto y la capa principal */
+        }
+                
+/*******************CUERPO formado por secciones y artículos*************/
+/* El ancho de la section debe ser el mismo que el de la CAPA PRINCIPAL pero restando el ancho de los dos paneles <aside>
+   (uno que está a la izquierda y el otro a la derecha), la suma de ambos paneles del <aside> tendrán un ancho
+   de 210 pixeles si el ancho de los tres debe ser de 1000 pixeles la section deberá tener
+   1000 pixeles - 230 pixeles = 770 pixeles
+   así que la section debe tener un ancho total de 770 pixeles (width 760 + padding-left 10)*/
+/*Recuerde siempre que el padding suma tamaños ya sea de width o de height */
+   section{
+      width: 760px; 
+      height: auto;
+      float:left;
+      padding-top: 10px;
+      padding-left: 10px;
+            }
+
+/* El elemento article tiene un ancho de width 670px + padding-left 40px + padding-right 60px = 770px (como la section)*/
+   article{
+      width: 670px;
+      height: auto;
+      float:left;
+      padding-top: 10px;
+      padding-left: 40px;
+      padding-right: 60px;
+      font-size: 18px;
+      text-align:justify;
+         }  
+            
+/*********************************PANEL LATERAL DERECHO Y PANEL IZQUIERDO *******************************/ 
+/* Panel derecho del aside tiene un ancho de width 110 píxeles + padding-left 5 pixeles = 115 pixeles */
+   aside{
+      width: 110px;
+      padding-left: 5px;
+      height: auto;
+      float:right;
+         }
+  
+  /* Panel izquierdo del aside utilizará este nombre de estilo y las características indicadas en el aside */
+  /* Panel izquierdo del aside tiene un ancho de width 110 píxeles + padding-left 5 pixeles = 115 pixeles */
+  /**** El panel izquierdo para que se ajuste a la izquierda debe incluir necesariamente el atributo float:left;)***/
+    #izquierda{float:left;
+           background-image: url(imagenes/fondo.png);
+           height: 680px;
+           padding-top: 30px;
+         }
+         
+ /*Los aside izquierdo y derecho suman en total una longitud de: derecho 115 píxeles + izquierdo 115 pixeles = 230 pixeles.         
+ /* Sumando estos dos a la section hacen los 1000 pixeles que tiene la capa que los contiene */
+ 
+ 
+/**************************************PIE************************************/
+/* Ancho total de width 970 pixeles + padding-left 30 pixeles = 1000 pixeles como la CAPA PRINCIPAL */
+   footer{
+      width: 970px; 
+      height: 40px;
+      float:left; /*Para que footer se ajueste a la izquierda*/
+      background-color: black;
+      color: white;
+      margin-top: 5px;
+      padding-top: 10px; /* Para que matenga una distancia de 10 píxeles con respecto al elemento anterior */
+      padding-left: 30px; /*El contenido de footer mantendrá con la parte izquierda del footer una distancia de 30 pixeles */
+         }
+         
+/*************************TEXTOS DE ENCABEZADOS *************************/ 
+             /****** Tamaño de fuente para encabezado h1 ******/
+
+   h1{
+      color: #ffffff; /* Color blanco */
+      font-family: andalus;
+      font-size: 30px;
+      padding-left:60px; /*El encabezado mantendrá con el objeto que lo contiene una distancia a la izquierda de 60 pixeles */
+      padding-top: 10px; /*El encabezado mantendrá con el objeto que lo contiene una distancia con la parte superior de 10 pixeles */
+          }
+          
+   h2{
+      padding-bottom: 10px;
+      }
+          
+   h3{
+      color: #ffffff; /* Color blanco */
+      font-family: andalus;
+      font-size: 25px;
+      padding-left:20px;
+           }           
+           
+   h4{
+      color:blue;
+      font-family: andalus;
+      font-size: 20px;
+      padding-top: 10px;    
+           }        
+ 
+/*************************ESPACIADOS PARA PÁRRAFOS E IMÁGENES *************************/           
+ p{padding-bottom: 20px; }   
+  img{padding-top: 20px; }
+  
+      
+
